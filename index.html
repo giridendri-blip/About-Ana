@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>About Ana</title>
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f2ec;--ink:#2a1a1d;--soft:#7a6468;--wine:#6b1220;--card:#fffaf4;--line:#dccfc6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#190b0e;--ink:#f3e7e0;--soft:#b79ea0;--wine:#e08a97;--card:#26141a;--line:#43262d}}
+:root[data-theme="dark"]{--bg:#190b0e;--ink:#f3e7e0;--soft:#b79ea0;--wine:#e08a97;--card:#26141a;--line:#43262d}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Lora,Georgia,serif;line-height:1.8;font-size:17px}
+.script{font-family:'Pinyon Script','Snell Roundhand',cursive;font-weight:400}
+.hero{min-height:100svh;background:radial-gradient(ellipse at 50% 35%,#7c1626 0%,#4d0b17 60%,#2c0610 100%);color:#fbeee8;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem 1.5rem;position:relative}
+.hero small{letter-spacing:.35em;font-size:.8rem;opacity:.8}
+.hero h1{font-size:clamp(6rem,30vw,12rem);line-height:1;margin:.1em 0 0;animation:rise 1.6s ease both}
+.hero p{font-style:italic;font-size:1.25rem;margin:.2rem 0 2.2rem;opacity:.9}
+.hero .date{letter-spacing:.5em;font-size:.8rem;opacity:.6}
+.hero a{position:absolute;bottom:calc(1.5rem + env(safe-area-inset-bottom,0px));color:#fbeee8;opacity:.6;text-decoration:none;font-size:.85rem}
+@keyframes rise{from{opacity:0;transform:translateY(14px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+@media (prefers-reduced-motion:reduce){.hero h1{animation:none}html{scroll-behavior:auto}}
+main{max-width:640px;margin:0 auto;padding:0 1.4rem}
+section{padding:4.5rem 0 1rem}
+h2{font-size:clamp(2.6rem,9vw,3.6rem);line-height:1.1;margin:0 0 .6rem;color:var(--wine)}
+.sub{color:var(--soft);font-style:italic;margin:0 0 1.6rem}
+p{margin:0 0 1.2rem}
+em.en,.en{font-style:italic;color:var(--wine)}
+.letter{background:#7a1616;color:#fff3ee;padding:2rem 1.6rem;box-shadow:0 14px 30px -14px rgba(0,0,0,.5);margin-top:-2rem;position:relative}
+.letter h2{color:#fff;font-size:2.2rem}
+.sign{font-size:2rem;margin:0}
+.tl{list-style:none;margin:0;padding:0 0 0 1.4rem;border-left:2px dashed var(--line)}
+.tl li{position:relative;padding:0 0 1.8rem 1rem}
+.tl li::before{content:"";position:absolute;left:-1.95rem;top:.55rem;width:.9rem;height:.9rem;border-radius:50%;background:var(--bg);border:2px solid var(--wine)}
+.tl li:last-child::before{background:var(--wine)}
+.tl b{display:inline-block;background:var(--wine);color:var(--bg);font-weight:600;font-size:.78rem;padding:.1rem .7rem;border-radius:99px;margin-bottom:.2rem}
+.tl span{display:block;color:var(--soft);font-style:italic;font-size:.95rem}
+.chat{display:flex;flex-direction:column;gap:.6rem;margin:1rem 0 1.4rem}
+.b{max-width:82%;padding:.6rem 1rem;border-radius:18px;font-size:.95rem;line-height:1.5;font-family:system-ui,sans-serif}
+.b.l{background:#fff;color:#222;border:1px solid var(--line);align-self:flex-start;border-bottom-left-radius:4px}
+.b.r{background:#2563eb;color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.songs{display:grid;gap:1rem}
+.song{background:var(--card);border:1px solid var(--line);padding:1.1rem 1.3rem;border-radius:6px}
+.song h3{margin:0 0 .2rem;font-size:1.02rem;color:var(--wine)}
+.song p{margin:0;font-size:.95rem;color:var(--soft)}
+ol.ten{margin:0;padding:0;list-style:none;counter-reset:n}
+ol.ten li{counter-increment:n;border-bottom:1px solid var(--line);padding:.7rem 0 .7rem 2.6rem;position:relative}
+ol.ten li::before{content:counter(n);position:absolute;left:0;top:.35rem;font-family:'Pinyon Script',cursive;font-size:1.9rem;color:var(--wine)}
+.facts{display:grid;gap:.9rem}
+.fact{border-left:3px solid var(--wine);padding:.2rem 0 .2rem 1rem}
+.fact i{display:block;color:var(--wine);font-size:1.05rem;font-style:normal;font-weight:600}
+.bucket{list-style:none;padding:0;margin:0}
+.bucket li{display:flex;gap:.8rem;align-items:flex-start;padding:.55rem 0;border-bottom:1px solid var(--line);cursor:pointer;user-select:none}
+.bucket input{appearance:none;flex:none;width:1.25rem;height:1.25rem;margin-top:.3rem;border:2px solid var(--wine);border-radius:4px;cursor:pointer;display:grid;place-content:center}
+.bucket input:checked{background:var(--wine)}
+.bucket input:checked::after{content:"✓";color:var(--bg);font-size:.9rem;line-height:1}
+.bucket input:checked+label{text-decoration:line-through;opacity:.65}
+.bucket label{cursor:pointer}
+.bucket input:focus-visible,.reveal:focus-visible{outline:3px solid var(--wine);outline-offset:2px}
+.quiz{background:var(--card);border:1px solid var(--line);padding:1.4rem;border-radius:6px;text-align:center}
+.quiz .score{font-size:2.6rem;color:var(--wine);line-height:1.2}
+button.reveal{font:inherit;background:var(--wine);color:var(--bg);border:0;padding:.7rem 1.5rem;border-radius:99px;cursor:pointer;font-weight:600}
+.hide{display:none}
+.doa{text-align:center;padding:3.5rem 1.5rem;margin-top:4rem;background:linear-gradient(#2c0610,#190509);color:#f6e4de}
+.doa h2{color:#fff}
+.doa p{max-width:520px;margin-left:auto;margin-right:auto}
+.end{text-align:center;padding:3rem 1.5rem 4rem;color:var(--soft);font-size:.95rem}
+.end .script{font-size:2.4rem;color:var(--wine);margin:0}
+.hr{height:1px;background:var(--line);margin:2.5rem 0 0}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <small>About</small>
+  <h1 class="script">Ana</h1>
+  <p>The woman that I love</p>
+  <div class="date">20.03.2026</div>
+  <a href="#surat">scroll pelan-pelan ↓</a>
+</header>
+
+<main>
+<section id="surat" style="padding-top:0">
+  <div class="letter">
+    <h2 class="script">About Ana</h2>
+    <p>Dear Ana, buku ini kubuat buat kamu. Bukan karena aku jago nulis, tapi karena ada terlalu banyak hal tentang kamu yang nggak muat kalau cuma lewat chat, atau cuma tersimpan di galeri HP. Semua itu pantas punya rumah, dan rumahnya ada di halaman-halaman ini.</p>
+    <p>So take your time. Baca pelan-pelan, dan kalau ada satu bagian yang bikin kamu senyum, berarti ini sudah berhasil.</p>
+    <p><i>Every word here is true, and every feeling is one I truly feel.</i></p>
+    <p class="sign script">with all my love, Dendri</p>
+  </div>
+</section>
+
+<section>
+  <h2 class="script">Our “first”</h2>
+  <p class="sub">saat semuanya bermula</p>
+  <div class="chat" aria-label="Percakapan pertama">
+    <div class="b r">Mudik kemanaa inii</div>
+    <div class="b l">Jakartaa niii</div>
+    <div class="b l">Gojek sesuai titik ka?</div>
+  </div>
+  <p>Satu pertanyaan santai di Story, dijawab subuh dengan “Jakartaa niii.” Lalu di WhatsApp, kamu bertanya “Gojek sesuai titik, ka?” dan aku tertawa sendirian di tengah malam.</p>
+  <p class="en">Some love stories begin with a very small hello.</p>
+</section>
+
+<section>
+  <h2 class="script">Pelan-pelan mendekat</h2>
+  <p>Aku tidak ingin terburu-buru. Kamu bukan orang yang pantas didekati dengan tergesa. Jadi aku mulai dari hal kecil, dan sadar bahwa mengobrol denganmu tidak pernah melelahkan. Tahu-tahu sudah larut malam, padahal rasanya baru mulai.</p>
+  <p>Sampai suatu titik, tanpa sadar, aku jatuh cinta. Pelan-pelan, <span class="en">until I was too far gone to turn back. And weirdly, I never wanted to.</span></p>
+</section>
+
+<section>
+  <h2 class="script">Our Little Timeline</h2>
+  <p class="sub">dari satu balasan kecil, sampai hari ini.</p>
+  <ul class="tl">
+    <li><b>20 Mar · 22.32</b>Aku balas Story TikTok-mu<span>Satu pertanyaan santai, awal semuanya.</span></li>
+    <li><b>21 Mar</b>Kamu jawab, obrolan pertama dimulai<span>Baru subuh kamu membalas.</span></li>
+    <li><b>5 Apr</b>Pindah ke WhatsApp, “Gojek sesuai titik, ka?”<span>Candaan receh, aku ketawa sendirian.</span></li>
+    <li><b>21 Apr</b>First date, nonton bareng<span>Malu-malu, tapi terasa awal yang panjang.</span></li>
+    <li><b>Sejak awal</b>Kita sama-sama serius: tanpa pacaran, langsung menuju nikah<span>Pelan-pelan, dengan arah yang sama.</span></li>
+    <li><b>18 Jul</b>Feast &amp; Hindia di Pestipalin, siang sampai malam<span>Nyanyi berdua sampai suara serak.</span></li>
+    <li><b>3 Nov</b>Ulang tahunmu yang ke-22<span>Semoga masih banyak yang kita rayakan.</span></li>
+    <li><b>Forever</b>Banyak cerita yang belum ditulis<span>Dan aku ingin menulisnya bersamamu.</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2 class="script">First date</h2>
+  <p class="sub">21 April 2026 · BIP · Bandung</p>
+  <p>Aku menjemputmu dari Baleendah ke Dago, lalu kita menonton Ghost in the Cell di BIP. Hari itu aku masih malu-malu, tapi di dekatmu semuanya terasa tenang.</p>
+  <p>Kamu hangat, banyak bercerita, dan sibuk dengan ponselmu dalam sweater warna-warni yang langsung jadi favoritku. Diam-diam aku mengabadikannya, tanpa tahu bahwa hari itu akan jadi awal dari sesuatu yang panjang.</p>
+  <p class="en">Maybe that was the day I quietly chose you.</p>
+</section>
+
+<section>
+  <h2 class="script">Hari Minggu kita</h2>
+  <p>Setelah kencan pertama itu, Minggu menjadi hari favoritku. Jalan tanpa tujuan, makan sate, duduk dan bercerita sampai lupa waktu. Tidak ada yang istimewa di atas kertas, tapi buatku semuanya berharga karena ada kamu.</p>
+  <p class="en">Hari yang paling kutunggu bukan Sabtu, bukan tanggal merah. It’s Minggu, hari ketika aku bertemu kamu.</p>
+</section>
+
+<section>
+  <h2 class="script">Soundtrack of Us</h2>
+  <p class="sub">Pestipalin, 18.07.2026 · suara serak, hati penuh</p>
+  <p>Dari siang sampai malam kita berdiri bareng, nyanyi sampai suara serak, dan dengerin Feast dan Hindia langsung, bukan lagi lewat earphone. Aku suka lihat kamu waktu menikmati musik. Ada binar di matamu yang jarang kulihat di waktu lain.</p>
+  <div class="songs">
+    <div class="song"><h3>Everything U Are — Hindia</h3><p>Lagu yang kita nyanyiin berdua di Pestipalin, sambil berdiri berdampingan. Salah satu lagu yang akan selalu bikin aku ingat kamu.</p></div>
+    <div class="song"><h3>Langit Runtuh — Feast</h3><p>Dua lagu yang sering kita putar, dan akhirnya kita dengar langsung, bukan lagi lewat earphone.</p></div>
+  </div>
+  <p style="margin-top:1.2rem" class="en">next track: lagu kita yang belum ditulis</p>
+</section>
+
+<section>
+  <h2 class="script">Perempuan dari Gorontalo</h2>
+  <p>Imrana Rahmadani lahir dan tumbuh di Gorontalo, lalu berani merantau ke Bandung. Meninggalkan rumah, keluarga, makanan yang akrab di lidah, untuk belajar sebuah kota dari nol, sendirian.</p>
+  <p>Buatku kamu itu kuat. Bukan kuat yang nggak pernah capek, tapi kuat yang tetap jalan walaupun capek.</p>
+  <p class="en">And if one day you feel alone in this city, remember: you’re not alone anymore. Ada aku.</p>
+</section>
+
+<section>
+  <h2 class="script">Perempuan yang nggak berhenti berusaha</h2>
+  <p>Laporan praktikum tentang anak-anak dengan ADHD dan kemampuan interaksi sosial mereka bukan tugas ringan. Jam-jam panjang di depan laptop, tanda pengenal oranye di leher, sampai hari sidang dengan blazer biru. Dan setelah selesai, kamu masih sempat pose sambil melet. <span class="en">Always yourself, even on the most serious day.</span></p>
+  <p class="script" style="font-size:2rem;color:var(--wine)">I’m so proud of you, Ana.</p>
+</section>
+
+<section>
+  <h2 class="script">Jauh, tapi tetap dekat</h2>
+  <p class="sub">Sukabumi → Bekasi → Majalengka → pulang ke aku</p>
+  <p>Tiga kota, dan tiga kali aku belajar merindukan kamu. Tapi kamu selalu bikin aku percaya, bahwa sejauh apa pun, kamu tetap pulang ke aku.</p>
+  <p class="en">Distance is just a number. Yang bikin dekat adalah kamu.</p>
+  <p>Tidak semua cerita kita terjadi berdampingan. Ada hari-hari ketika kamu di Jakarta, dan yang menemaniku hanya layar ponsel dan fotomu. Kotanya boleh berbeda, tapi senyummu tetap sama.</p>
+</section>
+
+<section>
+  <h2 class="script">Hal kecil, arti besar</h2>
+  <div class="facts">
+    <div class="fact">Cara kamu nanya “udah makan belum?” tanpa diminta.</div>
+    <div class="fact">Cara kamu dengerin ceritaku, bahkan yang ujungnya nggak jelas.</div>
+    <div class="fact">Kamu keras kepala banget dan susah dibilangin, tapi aku nggak pernah bosen ngingetin kamu.</div>
+    <div class="fact">Cara kamu hadir, bukan cuma fisik, tapi benar-benar ada.</div>
+    <div class="fact">Caramu melet, monyongin bibir ke kamera. <span class="en">Somehow it gets me every single time.</span></div>
+  </div>
+  <p style="margin-top:1.2rem" class="en">Kamu mungkin nggak sadar, tapi hal-hal sepele itu yang bikin aku jatuh cinta berkali-kali, bukan cuma sekali.</p>
+</section>
+
+<section>
+  <h2 class="script">Hal-hal yang kuhafal</h2>
+  <p>Aku hafal sate dan baso kesukaanmu, buku yang bisa bikin kamu lupa waktu, dan bubur seafood serta pedas yang selalu kamu hindari. Aku juga hafal tawamu, yang tetap datang bahkan untuk ceritaku yang paling nggak jelas.</p>
+  <p>Kita memang sering berantem, tapi selalu ada satu yang mengalah lebih dulu. Karena cinta kita lebih besar daripada ego kita.</p>
+  <p>Kamu bermimpi ke Banda Naira dan membuka sebuah panti sosial. Kamu juga pernah bilang akan menemaniku sampai aku sukses. Kalimat itu kusimpan di tempat paling aman.</p>
+  <p class="en">Small things, but I know every one by heart.</p>
+</section>
+
+<section>
+  <h2 class="script">Kamu, alasanku bertahan</h2>
+  <p>Aku mau jujur. Dunia ini kadang melelahkan, dan ada hari-hari ketika semuanya terasa berat. Aku bukan orang yang gampang terbuka soal itu.</p>
+  <p>Tapi sama kamu, aku berani. Kehadiranmu memberiku lebih banyak alasan untuk bertahan, dan pelan-pelan kamu ngajarin aku buat lebih sayang sama diriku sendiri.</p>
+  <p class="en">Maybe you don’t feel like you’ve done anything. But to me, it’s everything.</p>
+</section>
+
+<section>
+  <h2 class="script">Ten Things I Love About You</h2>
+  <ol class="ten">
+    <li>Keberanianmu merantau jauh dari Gorontalo, sendirian.</li>
+    <li>Caramu ngertiin aku bahkan sebelum aku selesai ngomong.</li>
+    <li>Senyummu, terutama yang muncul tiba-tiba.</li>
+    <li>Semangatmu di depan panggung konser.</li>
+    <li>Kesabaranmu menghadapi sifatku yang kadang ribet.</li>
+    <li>Kehangatanmu yang bikin siapa pun nyaman.</li>
+    <li>Kekuatanmu, yang jarang kamu akui sendiri.</li>
+    <li>Caramu menyayangi dengan tulus, tanpa banyak syarat.</li>
+    <li>Kamu yang apa adanya.</li>
+    <li>Dari sekian banyak orang di dunia, kamu memilih aku.</li>
+  </ol>
+</section>
+
+<section>
+  <h2 class="script">Mini Quiz</h2>
+  <p class="sub">siapa yang paling begitu, versi kita berdua</p>
+  <div class="quiz">
+    <p>Siapa yang lebih keras kepala? Siapa yang lebih sering melet ke kamera? Siapa yang duluan mengalah kalau berantem?</p>
+    <button class="reveal" id="qbtn" type="button" aria-expanded="false" aria-controls="qres">Lihat skor akhir</button>
+    <div id="qres" class="hide" role="status">
+      <div class="score script" style="margin-top:1rem">Ana 7 dan Dendri 3</div>
+      <p class="en" style="margin:0">Skornya timpang, tapi tim kita tetap satu.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="script">Our Future Bucket List</h2>
+  <p class="sub">satu per satu, kita centang bersama.</p>
+  <ul class="bucket">
+    <li><input type="checkbox" id="b0" checked><label for="b0">Konser bareng: Pestipalin 18.07.26</label></li>
+    <li><input type="checkbox" id="b1"><label for="b1">Ke Banda Naira, kaki basah di tepi laut</label></li>
+    <li><input type="checkbox" id="b2"><label for="b2">Membuka panti sosial impian kamu</label></li>
+    <li><input type="checkbox" id="b3"><label for="b3">Menikah, dan hidup bareng</label></li>
+    <li><input type="checkbox" id="b4"><label for="b4">Traveling bareng, satu kota baru setiap tahun</label></li>
+    <li><input type="checkbox" id="b5"><label for="b5">Nonton konser lagi, tangan masih saling menggenggam</label></li>
+    <li><input type="checkbox" id="b6"><label for="b6">Sate di Minggu pagi, sampai hari tua</label></li>
+    <li><input type="checkbox" id="b7"><label for="b7">Menata rak buku untuk koleksimu</label></li>
+    <li><input type="checkbox" id="b8"><label for="b8">Pulang bareng, dan nggak pamit lagi</label></li>
+  </ul>
+  <p style="margin-top:1.2rem" class="en">Semua tempat jadi rumah kalau ada kamu.</p>
+</section>
+
+<section>
+  <h2 class="script">Kita, sepuluh tahun lagi</h2>
+  <p>Aku membayangkan sepuluh tahun lagi. Rumah kecil yang hangat, dengan rak buku yang isinya kebanyakan milikmu. Pagi yang pelan, kopi dan teh di meja, dan dua lagu favorit kita mengalun dari speaker.</p>
+  <p>Kamu masih keras kepala, aku masih bawel mengingatkan, dan kita masih tertawa pada hal-hal yang cuma kita berdua yang ngerti.</p>
+  <p>Mungkin saat itu panti sosial yang selalu kamu ceritakan sudah berdiri. Mungkin kita sudah menginjak Banda Naira, berdiri di tepi laut dengan kaki basah, dan kamu bilang “ini mimpiku”, dan aku jawab “sekarang jadi mimpi kita”.</p>
+  <p class="en">Dan Minggu tetap jadi hari favorit kita. Bedanya, kita nggak perlu pamit pulang lagi.</p>
+</section>
+
+<section>
+  <h2 class="script">Harapanku untuk kita</h2>
+  <p class="sub">Bukan janji yang besar-besar. Cuma hal-hal yang ingin kujaga bersamamu.</p>
+  <div class="facts">
+    <div class="fact">Kita terus belajar saling mengerti, bahkan di hari ketika kita sama-sama capek.</div>
+    <div class="fact">Kalau berbeda pendapat, kita selalu kembali dengan hati yang lebih lembut.</div>
+    <div class="fact">Kita tumbuh bareng: dalam kerja, dalam mimpi, dalam iman, dan dalam hal-hal kecil.</div>
+    <div class="fact">Hubungan ini jadi tempat paling aman untuk pulang, buat kamu dan buat aku.</div>
+    <div class="fact">Kita sampai di hari yang kita tuju: menikah, dengan restu dan hati yang tenang.</div>
+    <div class="fact">Kita masih saling menggenggam, di konser, di Minggu pagi, dan di hari-hari tua nanti.</div>
+  </div>
+</section>
+</main>
+
+<div class="doa">
+  <h2 class="script">Doa kecilku untuk kita</h2>
+  <p>Semoga Allah menjaga hati kita tetap saling menemukan.</p>
+  <p>Semoga langkah kita dimudahkan, rezeki kita dicukupkan, dan niat baik kita sampai di waktu yang paling tepat.</p>
+  <p>Semoga kamu selalu sehat, selalu tertawa, dan selalu tahu bahwa kamu nggak sendirian.</p>
+  <p><i>Semoga kalau suatu hari kita lelah, kita ingat lagi malam 20 Maret, satu balasan kecil yang membawa kita sejauh ini.</i></p>
+  <p class="script" style="font-size:2.4rem;margin-top:1.6rem">Aamiin.</p>
+</div>
+
+<main>
+<section>
+  <h2 class="script">Letter for you</h2>
+  <p class="sub">Yang jarang kubilang, dan yang ingin kubilang lebih sering.</p>
+  <p>Aku bukan orang yang pandai merangkai kata di depanmu. Sering kali yang keluar hanya “udah sampai?” atau “hati-hati di jalan”. Tapi di balik kalimat sesederhana itu, ada perasaan yang jauh lebih besar dari yang sanggup kuucapkan.</p>
+  <p>Aku sayang kamu. Bukan dengan cara yang ramai, bukan yang perlu disaksikan siapa pun. Sayangku tenang, tumbuh pelan-pelan, dan setiap hari memilih untuk tetap tinggal.</p>
+  <p>Thank you for being part of my life, Imrana. Terima kasih sudah hadir, untuk waktu, perhatian, dan hal-hal kecil yang bagimu mungkin biasa saja, tapi bagiku itulah yang membuat hari-hariku terasa seperti pulang.</p>
+  <p>I love you, byku. I love you, Imrana Rahmadani. Semoga aku masih menjadi orang yang menemanimu di banyak konser berikutnya, dan di banyak cerita yang belum kita tulis.</p>
+  <p class="en">You’re not just someone I love.<br>You’re someone I hope to grow old with.</p>
+</section>
+</main>
+
+<footer class="end">
+  <p class="script">Selamanya milikmu, Dendri</p>
+  <p>Cerita ini dimulai 20 Maret 2026, pukul 22.32.<br>The next pages are ours to write.</p>
+</footer>
+
+<script>
+(function(){
+  var b=document.getElementById('qbtn'),r=document.getElementById('qres');
+  b.addEventListener('click',function(){
+    var open=r.classList.toggle('hide')===false;
+    b.setAttribute('aria-expanded',open);
+    b.textContent=open?'Sembunyikan':'Lihat skor akhir';
+  });
+})();
+</script>
+</body>
+</html>
